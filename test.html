@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>test</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div id="external"></div>
+	<div id="fullModal" class="popup-modal">
+        <a href="javascript:void(0);" class="btn-close-modal">X</a>
+        
+    </div>
+	<script src="./js/jquery.min.js"></script>   
+    <script src="./js/handlebars-v2.0.0.js"></script>
+    <script id="popup-template" type="text/x-handlebars-template">
+    /*<div id="prodSlide" class="owl-carousel popup-content">
+        <div class="item">
+        	{{#each .}}
+        		{{heading}} <br>
+        		{{#imageList}}
+        			{{imageThumb}} <br>
+        		{{/imageList}}
+        	{{/each}}
+        </div>
+    </div>*/
+    </script>
+    <script>
+    $(document).ready(function(){
+    	var source = $("#popup-template").html();
+		var template = Handlebars.compile(source);
+	
+		//$.ajax({
+    	//    dataType: "json",
+    	//    url: "data/products.json",
+    	//    success : function(data) {
+    	//    	console.log("success load json");
+    	//    	console.log(Object.keys(data).length);
+    	//    	$("#fullModal").append(template(data));
+    	//    },
+    	//    error : function() {
+    	//    	console.log("failed load json");
+    	//    }
+    	//});
+
+    	$.when(
+
+	        // load your data from a json store or php backend
+	        $.ajax({
+	            dataType: "json",
+	            url: "data/products.json"
+	        }),
+
+	        // load your external HTML template
+	        $.ajax({
+	        	//dataType:"text",
+	        	//async: false,
+	            url:"template/products.html"
+	        })
+
+	    ).done(function(data,html){
+	        // render the template and data, append it to your target in the DOM
+	        var source = html[0];
+	        var template = Handlebars.compile(source);
+	        $(template(data[0])).appendTo("#fullModal");
+	        console.log("ok");
+	        }
+	    );
+
+	    // render handlebars templates via ajax
+		function getTemplateAjax(path, callback) {
+		    var source;
+		    var template;
+		
+		    $.ajax({
+		        url: path,
+		            success: function(data) {
+		                source    = data;
+		                template  = Handlebars.compile(source);     
+		
+		                //execute the callback if passed
+		                if (callback) callback(template);
+		        }
+		    });
+		}
+
+		// function to compile handlebars template
+	    function renderHandlebarsTemplate(withTemplate,inElement,withData){
+	        getTemplateAjax(withTemplate, function(template) {
+	            jqueryNoConflict(inElement).html(template(withData));
+	        })
+	    };
+
+	    // grab data
+	    function retriveData(dataSource) {
+	        //var dataSource = 'working-data-file.json';
+	        jqueryNoConflict.getJSON(dataSource, renderDataVisualsTemplate);
+	    };
+
+	    // render compiled handlebars template
+	    function renderDataVisualsTemplate(data){
+	        handlebarsDebugHelper();
+	        renderHandlebarsTemplate('dataDetailsTemplate.handlebars', '#data-details', data);
+	    };
+    });
+    </script>
+</body>
+</html>
