@@ -45,11 +45,19 @@ $(document).ready(function(){
 
 	function initialize() {
     	var mapOptions = {
-    	  center: { lat: -7.0433968, lng: 107.5492185},
+    	  center: { lat: -7.106009, lng: 107.490123},
     	  zoom: 13
     	};
+        
     	var map = new google.maps.Map(document.getElementById('maplocation'),
     	    mapOptions);
+
+    	       var marker = new google.maps.Marker({
+           position: new google.maps.LatLng( -7.106009, 107.490123),
+           map: map,
+           title: 'Duta Niaga Sukses, CV \n Pasirjambu km. 3'
+        });    	
+
     }
     google.maps.event.addDomListener(window, 'load', initialize);
 

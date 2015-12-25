@@ -3083,7 +3083,9 @@ p {
     height: 20px;
     text-indent: -999em;
     right: 10px;
-    top: 10px; }
+    top: 10px; 
+    z-index: 9999;
+  }
 
 .black-modal {
   background: rgba(0, 0, 0, 0.75); }
@@ -3168,8 +3170,7 @@ p {
 #topNavi nav {
   max-width: 1300px;
   margin: 0 auto;
-  margin-top: 40px;
-  height: 60px;
+  height: 30px;
   font-size: 16px;
   vertical-align: middle;
   background-color: #fff;
@@ -3180,9 +3181,9 @@ p {
     height: 60px;
     vertical-align: middle; }
   #topNavi nav a {
-    height: 58px;
+    height: 50px;
     border-bottom: 2px solid transparent;
-    line-height: 42px;
+    line-height: 30px;
     text-transform: capitalize;
     background: transparent;
     vertical-align: middle;
@@ -3207,27 +3208,24 @@ p {
   #topNavi nav .social-list-big .icon-big.fb a {
     background: #04518c url(../images/facebook-white.png) center center no-repeat;
     margin: 0;
-    padding: 10px 15px;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 40px;
     border: none;
     color: #fff;
     text-indent: -999em; }
   #topNavi nav .social-list-big .icon-big.in a {
     background: #00a1d9 url(../images/linkedin-white.png) center center no-repeat;
     margin: 0;
-    padding: 10px 15px;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 40px;
     border: none;
     color: #fff;
     text-indent: -999em; }
   #topNavi nav .social-list-big .icon-big.tw a {
     background: #7ecefd url(../images/twitter-white.png) center center no-repeat;
     margin: 0;
-    padding: 10px 15px;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 40px;
     border: none;
     color: #fff;
     text-indent: -999em; }
@@ -3311,7 +3309,7 @@ p {
     width: 100%; }
 
 #page-products {
-  background: url(../images/section-bg2.jpg) center top no-repeat;
+  background: url(../images/section-bg2.png) center top no-repeat;
   background-size: 100%;
   text-align: center;
   position: relative; }
@@ -3338,8 +3336,9 @@ p {
     background: #252525;
     border: 2px solid #fff;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
+    width:100%;
     padding: 0 15px;
     margin-top: 15px; }
 
@@ -3365,7 +3364,7 @@ p {
     margin-top: 5px;
     margin-left: 8px;
     margin-bottom: 15px;
-    font-weight: 600; }
+    font-weight: 400; }
   #page-services .content-block-desc:after {
     content: "";
     clear: both;
@@ -3378,6 +3377,7 @@ p {
   #page-services .content-block-desc p {
     width: 380px;
     height: 105px;
+    font-size: 14px;
     display: block;
     float: left; }
   #page-services .content-block-desc a {
@@ -3497,7 +3497,8 @@ p {
     font-size: 16px;
     padding: 5px 15px; }
   #page-contact #maplocation {
-    width: 100%;
-    height: 500px;
+    width: 95%;
+    height: 388px;
+    margin-top: 60px;
     border: 2px solid #fff;
     box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px; }
