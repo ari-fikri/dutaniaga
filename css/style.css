@@ -3200,12 +3200,13 @@ p {
   #topNavi nav .logo {
     background: #fff url(../images/logo.png) center center no-repeat;
     text-indent: -999em;
-    width: 86px; }
+    width: 86px; 
+    height:45px;}
     #topNavi nav .logo > a {
       background: transparent url(../images/logo-devider.png) right center no-repeat;
       padding: 10px 15px;
       margin: 0;
-      height: 60px;
+      height: 50px;
       border-bottom: none; }
   #topNavi nav .social-list-big .icon-big.fb a {
     background: #04518c url(../images/facebook-white.png) center center no-repeat;
