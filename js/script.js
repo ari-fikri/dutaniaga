@@ -67,14 +67,25 @@ $(document).ready(function(){
     $(".pm-btn-close").click(function(){
     	$(this).parents(".popup-modal").addClass("hide");
     })
-    $(".readmore").click(function(){
-    	$(".black-modal").removeClass("hide");
-    })
-    $(".readmore-1").click(function(){
-    	$(".black-modal-1").removeClass("hide");
-    })
     $(".ta-item a,.la-item a").click(function(){
     	$("#articleModal").removeClass("hide");
+    })
+
+    // services item popup showing up
+    $(".readmore-sorting").click(function(){
+    	$(".black-modal-sorting").removeClass("hide");
+    })
+
+    $(".readmore-machinery").click(function(){
+    	$(".black-modal-machinery").removeClass("hide");
+    })
+
+    $(".readmore-tasting").click(function(){
+    	$(".black-modal-tasting").removeClass("hide");
+    })
+
+    $(".readmore-consultant").click(function(){
+    	$(".black-modal-consultant").removeClass("hide");
     })
 
     // products item full page showing up

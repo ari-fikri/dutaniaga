@@ -3075,7 +3075,6 @@ p {
   z-index: 999;
   top: 0;
   left: 0;
-  padding-top: 150px;
   vertical-align: middle; }
   .popup-modal > .btn-close-modal {
     position: absolute;
@@ -3310,7 +3309,7 @@ p {
     width: 100%; }
 
 #page-products {
-  background: url(../images/section-bg2.png) center top no-repeat;
+  background: url(../images/section-bg2.jpg) center top no-repeat;
   background-size: 100%;
   text-align: center;
   position: relative; }
