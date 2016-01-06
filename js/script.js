@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$('#main-section').fullpage({
-		anchors : ["home","products","services","articles","about","contact"],
+		anchors : ["home","products","services","about","contact"],
 		menu    : "#mainNavi"
 	});
 
@@ -52,7 +52,7 @@ $(document).ready(function(){
     	var map = new google.maps.Map(document.getElementById('maplocation'),
     	    mapOptions);
 
-    	       var marker = new google.maps.Marker({
+    	var marker = new google.maps.Marker({
            position: new google.maps.LatLng( -7.106009, 107.490123),
            map: map,
            title: 'Duta Niaga Sukses, CV \n Pasirjambu km. 3'
@@ -70,12 +70,30 @@ $(document).ready(function(){
     $(".readmore").click(function(){
     	$(".black-modal").removeClass("hide");
     })
+    $(".readmore-1").click(function(){
+    	$(".black-modal-1").removeClass("hide");
+    })
     $(".ta-item a,.la-item a").click(function(){
     	$("#articleModal").removeClass("hide");
     })
-    $("#page-products a").click(function(){
-    	$("#fullModal").removeClass("hide");
+
+    // products item full page showing up
+    $("#page-products a.green-tea").click(function(){
+    	$("#fullModal-green-tea").removeClass("hide");
     })
+
+    $("#page-products a.black-tea").click(function(){
+    	$("#fullModal-black-tea").removeClass("hide");
+    })
+
+    $("#page-products a.white-tea").click(function(){
+    	$("#fullModal-white-tea").removeClass("hide");
+    })
+
+    $("#page-products a.herbal-tea").click(function(){
+    	$("#fullModal-herbal-tea").removeClass("hide");
+    })
+
 });
 
 $(window).load(function(){
