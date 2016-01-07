@@ -1,0 +1,18 @@
+{{#each .}}
+    <div class="prod-item">
+        <div class="pc-left image-gallery">
+            <div class="image-full">
+                <img src="./images/gallery-big-2.jpg" alt="">
+            </div>
+            <ul class="list-thumbnail">
+            {{#imageList}}
+                <li><a href="javascript:void(0);"><img src="{{imageThumb}}" alt="thumb-item" data-image="{{imageBig}}"></a></li>
+            {{/imageList}}
+            </ul>
+        </div>
+        <div class="pc-right">
+            <h4>{{heading}}</h4>
+            <p>{{paragraph}}</p>
+        </div>
+    </div>
+{{/each}}
